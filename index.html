@@ -1,0 +1,86 @@
+<!
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sobre o Projeto</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="atividades.html">Atividades</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Por que esse projeto?</h2>
+    <p>Queremos ajudar as pessoas a aprender Libras de forma divertida, com jogos e atividades parecidos com o Duolingo!</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hand Talk Ativo - Projeto Escolar</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividades - Aprenda Libras</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    h1 { color: #2e7d32; }
+    .quiz, .associacao { background: white; padding: 15px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    button { margin-top: 10px; padding: 10px; background: #2e7d32; color: white; border: none; cursor: pointer; }
+    .resultado { font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>Atividades para Aprender Libras</h1>
+
+  <!-- Quiz de Libras -->
+  <div class="quiz">
+    <h2>Quiz: Qual é o sinal correto para "Obrigado"?</h2>
+    <button onclick="verificarResposta('a')">a) Mão na cabeça</button><br>
+    <button onclick="verificarResposta('b')">b) Mão na boca indo para frente</button><br>
+    <button onclick="verificarResposta('c')">c) Balançar as mãos</button><br>
+    <p class="resultado" id="resultadoQuiz"></p>
+  </div>
+
+  <!-- Jogo de Associação -->
+  <div class="associacao">
+    <h2>Associação: Combine a palavra com o sinal</h2>
+    <p><strong>Palavras:</strong> Amor, Comer, Dormir</p>
+    <p><strong>Sinais:</strong></p>
+    <ul>
+      <li>🤍 (mão no coração)</li>
+      <li>🍽️ (mão na boca)</li>
+      <li>😴 (cabeça na mão)</li>
+    </ul>
+    <p>Tente associar as palavras com os emojis!</p>
+  </div>
+
+  <script>
+    function verificarResposta(resp) {
+      const resultado = document.getElementById('resultadoQuiz');
+      if (resp === 'b') {
+        resultado.textContent = "✅ Correto! 'Obrigado' é sinalizado com a mão na boca indo para frente.";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "❌ Errado! Tente novamente.";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>

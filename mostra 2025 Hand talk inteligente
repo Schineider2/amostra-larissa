@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hand Talk Inteligente</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-color: #e3f2fd;
+      padding: 40px;
+    }
+    h1 {
+      color: #0d47a1;
+    }
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      background-color: #2196f3;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1976d2;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Hand Talk Inteligente</h1>
+  <p>Bem-vindo(a)! Escolha uma atividade para aprender Libras de forma divertida:</p>
+
+  <button onclick="location.href='sobre.html'">📘 Sobre o App</button>
+  <button onclick="location.href='quiz.html'">🧩 Quiz: Qual é o Sinal?</button>
+  <button onclick="location.href='vf.html'">✅❌ Verdadeiro ou Falso</button>
+  <button onclick="location.href='arrastar.html'">🔤 Complete com o Sinal</button>
+
+  <p style="margin-top: 40px;">Desenvolvido por [Seu Nome]</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sobre o Hand Talk Inteligente</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background-color: #fffaf0; }
+    h2 { color: #ff4500; }
+  </style>
+</head>
+<body>
+  <h2>📘 Sobre o Hand Talk Inteligente</h2>
+  <p>O Hand Talk Inteligente foi criado para ajudar todos a aprenderem Libras de maneira divertida e interativa.</p>
+  <p>Além do tradutor, o app agora tem quizzes, atividades e desafios para praticar os sinais e melhorar o aprendizado.</p>
+  <button onclick="location.href='index.html'">🔙 Voltar</button>
+</body>
+</html>
+📝 Arquivo: quiz.html
+html
+Copiar
+Editar
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz de Sinais</title>
+  <style>
+    body { font-family: Arial; background-color: #f0fff0; text-align: center; }
+    .pergunta { margin: 20px; font-size: 20px; }
+    button { padding: 10px; margin: 5px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>🧩 Quiz – Qual é o sinal?</h2>
+  <div class="pergunta" id="pergunta">🤚 (sinal de Libras)</div>
+  <button onclick="verificarResposta('Azul')">Azul</button>
+  <button onclick="verificarResposta('Verde')">Verde</button>
+  <button onclick="verificarResposta('Vermelho')">Vermelho</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificarResposta(resposta) {
+      if (resposta === 'Verde') {
+        document.getElementById("resultado").innerText = "✅ Correto!";
+      } else {
+        document.getElementById("resultado").innerText = "❌ Tente novamente!";
+      }
+    }
+  </script>
+</body>
+</html>
+📝 Arquivo: vf.html
+html
+Copiar
+Editar
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verdadeiro ou Falso</title>
+  <style>
+    body { font-family: Arial; background: #e8f5e9; text-align: center; }
+    button { padding: 15px; margin: 10px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h2>✅❌ Verdadeiro ou Falso</h2>
+  <p>🤟 Esse sinal significa "Vermelho".</p>
+
+  <button onclick="responder(true)">✅ Verdadeiro</button>
+  <button onclick="responder(false)">❌ Falso</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function responder(resposta) {
+      if (resposta === true) {
+        document.getElementById("resultado").innerText = "🎉 Correto!";
+      } else {
+        document.getElementById("resultado").innerText = "❌ Resposta incorreta.";
+      }
+    }
+  </script>
+</body>
+</html>
